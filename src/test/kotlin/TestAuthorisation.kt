@@ -9,6 +9,9 @@ import org.openqa.selenium.support.ui.WebDriverWait
 import java.util.concurrent.TimeUnit
 
 
+
+
+
 class TestAuthorisation : StringSpec(), TestListener {
     private val driver: WebDriver = ChromeDriver()
     private val loginPage = LoginPage(driver)
@@ -16,7 +19,7 @@ class TestAuthorisation : StringSpec(), TestListener {
     private val wait = WebDriverWait(driver, 10)
 
     override fun afterSpec(description: Description, spec: Spec) {
-        super<StringSpec>.afterSpec(description, spec)
+    super<StringSpec>.afterSpec(description, spec)
         driver.quit()
     }
 
